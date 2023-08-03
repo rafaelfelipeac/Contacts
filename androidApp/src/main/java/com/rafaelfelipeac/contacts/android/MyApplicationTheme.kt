@@ -1,4 +1,4 @@
-package com.rafaelfelipeac.contactskmm.android
+package com.rafaelfelipeac.contacts.android
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.shape.RoundedCornerShape

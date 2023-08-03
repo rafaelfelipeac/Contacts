@@ -1,4 +1,4 @@
-package com.rafaelfelipeac.contactskmm.android
+package com.rafaelfelipeac.contacts.android
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -8,7 +8,7 @@ import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.rafaelfelipeac.contactskmm.Greeting
+import com.rafaelfelipeac.contacts.Greeting
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

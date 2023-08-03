@@ -5,10 +5,10 @@ plugins {
 }
 
 android {
-    namespace = "com.rafaelfelipeac.contactskmm.android"
+    namespace = "com.rafaelfelipeac.contacts.android"
     compileSdk = 33
     defaultConfig {
-        applicationId = "com.rafaelfelipeac.contactskmm.android"
+        applicationId = "com.rafaelfelipeac.contacts.android"
         minSdk = 24
         targetSdk = 33
         versionCode = 1

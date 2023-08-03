@@ -88,7 +88,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.rafaelfelipeac.contactskmm"
+    namespace = "com.rafaelfelipeac.contacts"
     compileSdk = 33
     defaultConfig {
         minSdk = 24

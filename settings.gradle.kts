@@ -30,6 +30,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ContactsKMM"
+rootProject.name = "Contacts"
 include(":androidApp")
 include(":shared")

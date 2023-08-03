@@ -1,4 +1,4 @@
-package com.rafaelfelipeac.contactskmm
+package com.rafaelfelipeac.contacts
 
 interface Platform {
     val name: String

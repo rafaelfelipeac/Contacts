@@ -1,4 +1,4 @@
-package com.rafaelfelipeac.contactskmm
+package com.rafaelfelipeac.contacts
 
 class Greeting {
     private val platform: Platform = getPlatform()
