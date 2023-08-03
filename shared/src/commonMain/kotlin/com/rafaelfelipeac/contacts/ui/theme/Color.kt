@@ -1,4 +1,4 @@
-package com.rafaelfelipeac.contacts
+package com.rafaelfelipeac.contacts.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
