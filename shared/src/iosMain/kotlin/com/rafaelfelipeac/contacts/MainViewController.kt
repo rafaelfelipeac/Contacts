@@ -1,6 +1,7 @@
 package com.rafaelfelipeac.contacts
 
 import androidx.compose.ui.window.ComposeUIViewController
+import com.rafaelfelipeac.contacts.di.AppModule
 
 fun MainViewController() = ComposeUIViewController {
     val isDarkTheme =
@@ -8,6 +9,7 @@ fun MainViewController() = ComposeUIViewController {
                 UIUserInterfaceStyle.UIUserInterfaceStyleDark
     App(
         darkTheme = isDarkTheme,
-        dynamicColor = false
+        dynamicColor = false,
+        appModule = AppModule()
     )
 }

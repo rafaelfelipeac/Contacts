@@ -10,13 +10,15 @@ import androidx.compose.ui.Modifier
 import com.rafaelfelipeac.contacts.contacts.presentation.ContactListScreen
 import com.rafaelfelipeac.contacts.contacts.presentation.ContactListViewModel
 import com.rafaelfelipeac.contacts.core.presentation.ContactsTheme
+import com.rafaelfelipeac.contacts.di.AppModule
 import dev.icerock.moko.mvvm.compose.getViewModel
 import dev.icerock.moko.mvvm.compose.viewModelFactory
 
 @Composable
 fun App(
     darkTheme: Boolean,
-    dynamicColor: Boolean
+    dynamicColor: Boolean,
+    appModule: AppModule
 ) {
     ContactsTheme(
         darkTheme = darkTheme,
@@ -25,7 +27,7 @@ fun App(
         val viewModel = getViewModel(
             key = "contact-list-screen",
             factory = viewModelFactory {
-                ContactListViewModel()
+                ContactListViewModel(appModule.contactDataSource)
             }
         )
 
