@@ -21,6 +21,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.rafaelfelipeac.contacts.contacts.domain.Contact
+import com.rafaelfelipeac.contacts.contacts.presentation.components.AddContactSheet
 import com.rafaelfelipeac.contacts.contacts.presentation.components.ContactListItem
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -73,4 +74,11 @@ fun ContactListScreen(
             }
         }
     }
+
+    AddContactSheet(
+        state = state,
+        newContact = newContact,
+        isOpen = state.isAddContactSheetOpen,
+        onEvent = onEvent
+    )
 }

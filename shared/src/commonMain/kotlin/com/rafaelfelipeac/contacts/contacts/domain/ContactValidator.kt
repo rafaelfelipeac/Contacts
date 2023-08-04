@@ -15,7 +15,7 @@ object ContactValidator {
 
         val emailRegex = Regex("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}\$")
         if (!emailRegex.matches(contact.email)) {
-            result = result.copy(emailError = "This is not a valid empty.")
+            result = result.copy(emailError = "This is not a valid email.")
         }
 
         if (contact.phoneNumber.isBlank()) {

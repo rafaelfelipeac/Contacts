@@ -60,7 +60,7 @@ class ContactListViewModel(
                     _state.update {
                         it.copy(
                             isSelectedContactSheetOpen = false,
-                            isAddedContactSheetOpen = false,
+                            isAddContactSheetOpen = false,
                             firstNameError = null,
                             lastNameError = null,
                             emailError = null,
@@ -81,7 +81,7 @@ class ContactListViewModel(
                 _state.update {
                     it.copy(
                         selectedContact = null,
-                        isAddedContactSheetOpen = true,
+                        isAddContactSheetOpen = true,
                         isSelectedContactSheetOpen = false
                     )
                 }
@@ -91,7 +91,7 @@ class ContactListViewModel(
             ContactListEvent.OnAddNewContactClick -> {
                 _state.update {
                     it.copy(
-                        isAddedContactSheetOpen = true
+                        isAddContactSheetOpen = true
                     )
                 }
                 newContact = Contact(
@@ -148,7 +148,7 @@ class ContactListViewModel(
                     if (errors.isEmpty()) {
                         _state.update {
                             it.copy(
-                                isAddedContactSheetOpen = false,
+                                isAddContactSheetOpen = false,
                                 firstNameError = null,
                                 lastNameError = null,
                                 emailError = null,
