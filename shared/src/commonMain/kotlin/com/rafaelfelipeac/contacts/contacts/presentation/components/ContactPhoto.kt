@@ -18,6 +18,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.rafaelfelipeac.contacts.contacts.domain.Contact
 import com.rafaelfelipeac.contacts.core.presentation.rememberBitmapFromBytes
+import com.rafaelfelipeac.contacts.database.ContactDatabase
 
 @Composable
 fun ContactPhoto(
