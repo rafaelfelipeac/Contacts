@@ -1,6 +1,8 @@
 package com.rafaelfelipeac.contacts
 
+import androidx.compose.ui.interop.LocalUIViewController
 import androidx.compose.ui.window.ComposeUIViewController
+import com.rafaelfelipeac.contacts.core.presentation.ImagePickerFactory
 import com.rafaelfelipeac.contacts.di.AppModule
 
 fun MainViewController() = ComposeUIViewController {
@@ -10,6 +12,7 @@ fun MainViewController() = ComposeUIViewController {
     App(
         darkTheme = isDarkTheme,
         dynamicColor = false,
-        appModule = AppModule()
+        appModule = AppModule(),
+        imagePicker = ImagePickerFactory(LocalUIViewController.current).createPicker()
     )
 }
