@@ -22,7 +22,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.rafaelfelipeac.contacts.contacts.domain.Contact
 import com.rafaelfelipeac.contacts.contacts.presentation.components.AddContactSheet
+import com.rafaelfelipeac.contacts.contacts.presentation.components.ContactDetailSheet
 import com.rafaelfelipeac.contacts.contacts.presentation.components.ContactListItem
+import com.rafaelfelipeac.contacts.contacts.presentation.components.RecentlyAddedContacts
 import com.rafaelfelipeac.contacts.core.presentation.ImagePicker
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -58,6 +60,15 @@ fun ContactListScreen(
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             item {
+                RecentlyAddedContacts(
+                    contacts = state.recentlyAddedContacts,
+                    onClick = {
+                        onEvent(ContactListEvent.SelectContact(it))
+                    }
+                )
+            }
+
+            item {
                 Text(
                     text = "My Contacts (${state.contacts.size})",
                     modifier = Modifier
@@ -80,6 +91,12 @@ fun ContactListScreen(
             }
         }
     }
+
+    ContactDetailSheet(
+        isOpen = state.isSelectedContactSheetOpen,
+        selectedContact = state.selectedContact,
+        onEvent = onEvent
+    )
 
     AddContactSheet(
         state = state,
