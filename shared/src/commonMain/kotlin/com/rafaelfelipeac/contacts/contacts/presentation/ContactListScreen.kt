@@ -33,9 +33,9 @@ fun ContactListScreen(
     onEvent: (ContactListEvent) -> Unit,
     imagePicker: ImagePicker
 ) {
-    /*imagePicker.registerPicker { imageBytes ->
+    imagePicker.registerPicker { imageBytes ->
         onEvent(ContactListEvent.OnPhotoPicked(imageBytes))
-    }*/
+    }
 
     Scaffold(
         floatingActionButton = {
@@ -87,7 +87,7 @@ fun ContactListScreen(
         isOpen = state.isAddContactSheetOpen,
         onEvent = { event ->
             if (event is ContactListEvent.OnAddPhotoClicked) {
-                // imagePicker.pickImage()
+                imagePicker.pickImage()
             }
             onEvent(event)
         }

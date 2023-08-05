@@ -1,6 +1,7 @@
 package com.rafaelfelipeac.contacts.core.presentation
 
 import androidx.activity.ComponentActivity
+import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.runtime.Composable
@@ -13,9 +14,9 @@ actual class ImagePicker(
 
     @Composable
     actual fun registerPicker(onImagePicked: (ByteArray) -> Unit) {
-        getContent = activity.registerForActivityResult(
+        getContent = rememberLauncherForActivityResult(
             ActivityResultContracts.GetContent()
-        ) {uri ->
+        ) { uri ->
             uri?.let {
                 activity.contentResolver.openInputStream(uri)?.use {
                     onImagePicked(it.readBytes())

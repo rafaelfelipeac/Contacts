@@ -4,6 +4,7 @@ import android.content.Context
 import com.rafaelfelipeac.contacts.contacts.data.SqlDelightContactDataSource
 import com.rafaelfelipeac.contacts.contacts.domain.ContactDataSource
 import com.rafaelfelipeac.contacts.core.data.DatabaseDriverFactory
+import com.rafaelfelipeac.contacts.core.data.ImageStorage
 import com.rafaelfelipeac.contacts.database.ContactDatabase
 
 actual class AppModule(
@@ -14,7 +15,8 @@ actual class AppModule(
         SqlDelightContactDataSource(
             db = ContactDatabase(
                 driver = DatabaseDriverFactory(context).create()
-            )
+            ),
+            imageStorage = ImageStorage(context)
         )
     }
 }
